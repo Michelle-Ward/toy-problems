@@ -33,7 +33,7 @@ describe('Toy Problems', function() {
       expect(actual).to.be.eql(expected);
     });
     it('should be able to handle negative integers', function() {
-      let actual = bubbleSort([5,-3, 9, 1, 4, -1], 6);
+      let actual = twoNumberSum([5,-3, 9, 1, 4, -1], 6);
       let expected = [-3,9];
       expect(actual.length).to.be.equal(expected.length);
     });
