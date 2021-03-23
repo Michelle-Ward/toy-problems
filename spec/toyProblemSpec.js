@@ -17,7 +17,7 @@ describe('Toy Problems', function() {
     });
     it('should be able to sort negative numbers', function() {
       let actual = bubbleSort([ -6, -34, -73, -2, -14]);
-      let expected = [ -2, -6, -14, -34, -73];
+      let expected = [-73, -34, -14, -6, -2];
       expect(actual).to.be.eql(expected);
     });
   });
