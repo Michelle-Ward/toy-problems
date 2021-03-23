@@ -1,0 +1,21 @@
+{
+  "name": "toy-problems",
+  "author": "Michelle Ward",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michelle-Ward/toy-problems.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michelle-Ward/toy-problems/issues"
+  },
+  "homepage": "https://github.com/Michelle-Ward/toy-problems#readme"
+}
