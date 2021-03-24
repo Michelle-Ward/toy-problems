@@ -43,4 +43,18 @@ describe('Toy Problems', function() {
       expect(actual).to.be.eql(expected);
     });
   });
+  describe('isUnique', function() {
+    it('should return a boolean', function() {
+      let actual = isUnique('racecar');
+      expect(typeof actual).to.be.equal('boolean');
+    });
+    it('should return true if string contains unique characters', function() {
+      let actual = isUnique('adsfjklwetuobnxm');
+      expect(actual).to.be.true;
+    });
+    it('should return false if string has duplicate characters', function() {
+      let actual = isUnique('racecar');
+      expect(actual).to.be.false;
+    });
+  });
 });
