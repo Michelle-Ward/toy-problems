@@ -84,8 +84,31 @@ describe('Toy Problems', function() {
   describe('selectionSort', function() {
     it('should return an array', function() {
       let actual = selectionSort([3,2,4,5]);
+      expect(Array.isArray(actual)).to.be.true;
+    });
+    it('should return a sorted array', function() {
+      let actual = selectionSort([3,2,4,5]);
       let expected = [2,3,4,5];
-      expect(typeof actual).to.be.equal();
+      expect(actual).to.be.eql(expected);
+    });
+    it('should return a empty array with empty input', function() {
+      let actual = selectionSort([]);
+      expect(Array.isArray(actual)).to.be.true;
+    });
+    it('should be able to handle negative integers', function() {
+      let actual = selectionSort([-31,-2,-24,-15, -1,-65, -34]);
+      let expected = [-65,-34,-31,-24,-15,-2,-1];
+      expect(actual).to.be.eql(expected);
+    });
+    it('should be able to handle negative and positive integers', function() {
+      let actual = selectionSort([3,4,-2,1,0,6,-9]);
+      let expected = [-9,-2,0,1,3,4,6];
+      expect(actual).to.be.eql(expected);
+    });
+    it('should be able to handle duplicate numbers', function() {
+      let actual = selectionSort([2,3,2,3,-1,-1,3,5]);
+      let expected = [-1,-1,2,2,3,3,3,5];
+      expect(actual).to.be.eql(expected);
     });
   });
   describe('rlEncoding', function() {
