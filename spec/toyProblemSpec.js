@@ -57,4 +57,59 @@ describe('Toy Problems', function() {
       expect(actual).to.be.false;
     });
   });
+  describe('ccEncryptor', function() {
+    it('should return a string', function() {
+      let actual = ccEncryptor('abc', 1);
+      expect(typeof actual).to.be.equal('string');
+    });
+    it('should return an encoded string with the appropriate shift', function() {
+      let actual = ccEncryptor('dfhfsagyeb', 10);
+      expect(actual).to.be.equal('nprpckqiol');
+    });
+    it('should handle wrapping', function() {
+      let actual = ccEncryptor('xyza', 3);
+      expect(actual).to.be.equal('zabc');
+    });
+    it('should handle a key that wraps multiple times', function() {
+      let actual = ccEncryptor('hfuwefsdahgiewjebfjkheuw', 52);
+      expect(actual).to.be.equal('hfuwefsdahgiewjebfjkheuw');
+    });
+  });
+  describe('isSubsequence', function() {
+    it('should return a boolean', function() {
+      let actual = isSubsequence('abc');
+      expect(typeof actual).to.be.equal('string');
+    });
+  });
+  describe('selectionSort', function() {
+    it('should return an array', function() {
+      let actual = selectionSort([3,2,4,5]);
+      let expected = [2,3,4,5];
+      expect(typeof actual).to.be.equal();
+    });
+  });
+  describe('rlEncoding', function() {
+    it('should return a string', function() {
+      let actual = rlEncoding('abc');
+      expect(typeof actual).to.be.equal('string');
+    });
+  });
+  describe('insertionSort', function() {
+    it('should return an array', function() {
+      let actual = insertionSort('abc');
+      expect(typeof actual).to.be.equal('string');
+    });
+  });
+  describe('nthFibonacci', function() {
+    it('should return a number', function() {
+      let actual = insertionSort('abc');
+      expect(typeof actual).to.be.equal('string');
+    });
+  });
+  describe('binarySearch', function() {
+    it('should return a number', function() {
+      let actual = insertionSort('abc');
+      expect(typeof actual).to.be.equal('string');
+    });
+  });
 });
