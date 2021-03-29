@@ -57,6 +57,58 @@ describe('Toy Problems', function() {
       expect(actual).to.be.false;
     });
   });
+  describe('firstUnqiChar', function() {
+    it('should return index of first uniq characters', function() {
+      let actual = firstUniqChar('abbbcdd');
+      let expected = 0;
+      expect(actual).to.be.equal(expected);
+    });
+    it('should return index of first uniq characters', function() {
+      let actual = firstUniqChar('jdbkhgahuerjh');
+      let expected = 1;
+      expect(actual).to.be.equal(expected);
+    });
+    it('should return index of first uniq characters', function() {
+      let actual = firstUniqChar('racecar');
+      let expected = 3;
+      expect(actual).to.be.equal(expected);
+    });
+    it('should return -1 if no unique characters', function() {
+      let actual = firstUniqChar('zzxxxyyyssssdddeeeffff');
+      let expected = -1;
+      expect(actual).to.be.equal(expected);
+    });
+  });
+  describe('urlify', function() {
+    it('should return a string', function() {
+      let actual = urlify('hello world', 11);
+      expect(typeof actual).to.be.equal('string');
+    });
+    it('should return a URLified string', function() {
+      let actual = urlify('hello world', 11);
+      let expected = 'hello%20world'
+      expect(actual).to.be.equal(expected);
+    });
+    it('should return a URLified string', function() {
+      let actual = urlify('happy and you know it clap your hands', 37);
+      let expected = 'happy%20and%20you%20know%20it%20clap%20your%20hands';
+      expect(actual).to.be.equal(expected);
+    });
+  });
+  describe('majoritySearch', function() {
+    it('should return a number', function() {
+      let actual = majoritySearch([2,2,2,1]);
+      expect(typeof actual).to.be.equal('number');
+    });
+    it('should return a number that occurs more then n / 2 times in the array', function() {
+      let actual = majoritySearch([2,2,2,1]);
+      expect(actual).to.be.equal(2);
+    });
+    it('should return a number that occurs more then n / 2 times in the array', function() {
+      let actual = majoritySearch([4,5,2,4,7,4,5,4,4,1,2,4,4,4,43,4]);
+      expect(actual).to.be.equal(4);
+    });
+  });
   describe('ccEncryptor', function() {
     it('should return a string', function() {
       let actual = ccEncryptor('abc', 1);
