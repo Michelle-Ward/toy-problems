@@ -120,7 +120,7 @@ describe('Toy Problems', function() {
     });
     it('should handle wrapping', function() {
       let actual = ccEncryptor('xyza', 3);
-      expect(actual).to.be.equal('zabc');
+      expect(actual).to.be.equal('abcd');
     });
     it('should handle a key that wraps multiple times', function() {
       let actual = ccEncryptor('hfuwefsdahgiewjebfjkheuw', 52);
