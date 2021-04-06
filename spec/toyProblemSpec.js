@@ -127,6 +127,28 @@ describe('Toy Problems', function() {
       expect(actual).to.be.equal('hfuwefsdahgiewjebfjkheuw');
     });
   });
+  describe('findDisappearedNums', function() {
+    it('should return an array', function() {
+      let actual = findDisappearedNums([1,1]);
+      expect(Array.isArray(actual)).to.be.true;
+    });
+    it('should return nums in range that are not found', function() {
+      let actual = findDisappearedNums([1,1]);
+      expect(actual).to.be.eql([2]);
+    });
+    it('should return nums in range that are not found', function() {
+      let actual = findDisappearedNums([1,5,4,2,3,3]);
+      expect(actual).to.be.eql([6]);
+    });
+    it('should return nums in range that are not found', function() {
+      let actual = findDisappearedNums([1,5,6,2,3,3,8,8]);
+      expect(actual).to.be.eql([4,7]);
+    });
+    it('should return an empty array when no nums are disappeared', function() {
+      let actual = findDisappearedNums([1]);
+      expect(actual).to.be.eql([]);
+    });
+  });
   describe('isSubsequence', function() {
     it('should return a boolean', function() {
       let actual = isSubsequence('abc');
@@ -167,6 +189,24 @@ describe('Toy Problems', function() {
     it('should return a string', function() {
       let actual = rlEncoding('abc');
       expect(typeof actual).to.be.equal('string');
+    });
+  });
+  describe('missingNums', function() {
+    it('should return an number', function() {
+      let actual = missingNums([0,2]);
+      expect(typeof actual).to.be.equal('number');
+    });
+    it('should return an number', function() {
+      let actual = missingNums([0]);
+      expect(actual).to.be.equal(1);
+    });
+    it('should return the missing number n, if there is no skip in sequence', function() {
+      let actual = missingNums([6,3,5,2,1,4,0]);
+      expect(actual).to.be.equal(7);
+    });
+    it('should return  the missing number if their is a skio', function() {
+      let actual = missingNums([0,3,2,4,6,5]);
+      expect(actual).to.be.equal(1);
     });
   });
   describe('insertionSort', function() {
