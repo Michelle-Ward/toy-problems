@@ -223,8 +223,16 @@ describe('Toy Problems', function() {
   });
   describe('binarySearch', function() {
     it('should return a number', function() {
-      let actual = insertionSort('abc');
-      expect(typeof actual).to.be.equal('string');
+      let actual = binarySearch([2,3,1,6,4,8,5],6);
+      expect(typeof actual).to.be.equal('number');
+    });
+    it('should return the index of the target num', function() {
+      let actual = binarySearch([2,3,1,6,4,8,5],6);
+      expect(actual).to.be.equal(3);
+    });
+    it('should return a negative one if target is not found in the input', function() {
+      let actual = binarySearch([2,3,1,6,4,8,5],40);
+      expect(actual).to.be.equal(-1);
     });
   });
 });
