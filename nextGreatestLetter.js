@@ -8,9 +8,14 @@
 
 //
 const nextGreatestLetter = (letters, target) => {
-  //convert target into the char code
   //iterate over the array
     //if the char code is greater than char codeof target
       //return the current char
   //return the first element of the array
+  for ( var i = 0; i < letters.legnth; i++) {
+    if (letters[i] > target) {
+      return letters[i];
+    }
+  }
+  return letters[0];
 }
