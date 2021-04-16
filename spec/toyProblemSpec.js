@@ -151,8 +151,20 @@ describe('Toy Problems', function() {
   });
   describe('isSubsequence', function() {
     it('should return a boolean', function() {
-      let actual = isSubsequence('abc');
-      expect(typeof actual).to.be.equal('string');
+      let actual = isSubsequence([1,2,3,4,5,6,7,8], [2,4,7]);
+      expect(typeof actual).to.be.equal('boolean');
+    });
+    it('should return a boolean', function() {
+      let actual = isSubsequence([1,2], [2,4,7]);
+      expect(actual).to.be.false;
+    });
+    it('should return a boolean', function() {
+      let actual = isSubsequence([1,2], [2]);
+      expect(actual).to.be.true;
+    });
+    it('should return a boolean', function() {
+      let actual = isSubsequence([1,2,-2,20,7,9,70,], [-2,20,70]);
+      expect(actual).to.be.true;
     });
   });
   describe('selectionSort', function() {
@@ -233,6 +245,12 @@ describe('Toy Problems', function() {
     it('should return a negative one if target is not found in the input', function() {
       let actual = binarySearch([2,3,1,6,4,8,5],40);
       expect(actual).to.be.equal(-1);
+    });
+  });
+  describe('nextGreatestLetter', function() {
+    it('should return a number', function() {
+      let actual = nextGreatestLetter('abc');
+      expect(typeof actual).to.be.equal('string');
     });
   });
 });

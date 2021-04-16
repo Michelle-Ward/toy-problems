@@ -22,5 +22,15 @@ const isSubsequence = (array, subsequence) => {
 
   let sIndex = 0;
   let aIndex = 0;
-  while (sIndex < subsequence.length && aIndex < array.length)
+  while (sIndex < subsequence.length && aIndex < array.length) {
+    if (subsequence[sIndex] === array[aIndex]) {
+      sIndex += 1;
+    }
+    aIndex += 1;
+  }
+  if (sIndex >= subsequence.length) {
+    return true;
+  } else {
+    return false;
+  }
 }

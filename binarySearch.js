@@ -18,7 +18,7 @@ const binarySearch = (array, target) => {
     let left = 0;
     let right = array.length-1;
     while (left <= right) {
-        let mid = Math.floor((right - left)/2 +left);
+        let mid = Math.floor((right - left)/2 + left);
         if (array[mid] === target) {
             return mid;
         }
