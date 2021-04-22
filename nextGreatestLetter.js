@@ -21,3 +21,17 @@ const nextGreatestLetter = (letters, target) => {
   let idx = lo % (letters.length);
   return letters[idx];
 }
+
+  //create variable to keep track of alrgest value seen
+    //iterate over the array
+       //compare with largest variable
+         //if larger reassign
+    //return largest index
+    let largest = 0;
+
+    for ( var i = 1; i < arr.length; i++) {
+        if ( arr[i] > arr[largest]) {
+            largest = i;
+        }
+    }
+    return largest;

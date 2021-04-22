@@ -197,6 +197,20 @@ describe('Toy Problems', function() {
       expect(actual).to.be.eql(expected);
     });
   });
+  describe('getMaxPairsSums', function() {
+    it('should return a number', function() {
+      let actual = getMaxPairsSums([1,2,3,4,5],[5,4,6,3,2]);
+      expect(typeof actual).to.be.equal('number');
+    });
+    it('should return a largest possible sum', function() {
+      let actual = getMaxPairsSums([5,5,3,9,2],[3,6,7,2,1]);
+      expect(actual).to.be.equal(32);
+    });
+    it('should return a largest possible sum', function() {
+      let actual = getMaxPairsSums([5],[1]);
+      expect(actual).to.be.equal(5);
+    });
+  });
   describe('rlEncoding', function() {
     it('should return a string', function() {
       let actual = rlEncoding('abc');
