@@ -241,6 +241,16 @@ describe('Toy Problems', function() {
       expect(typeof actual).to.be.equal('string');
     });
   });
+  describe('stringSearch', function() {
+    it('should return a number', function() {
+      let actual = stringSearch('abc', 'a');
+      expect(typeof actual).to.be.equal('number');
+    });
+    it('should return the times the fragment occurs in the string', function() {
+      let actual = stringSearch('catacatcarcat', 'cat');
+      expect(actual).to.be.equal(3);
+    });
+  });
   describe('nthFibonacci', function() {
     it('should return a number', function() {
       let actual = insertionSort('abc');
