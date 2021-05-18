@@ -277,4 +277,9 @@ describe('Toy Problems', function() {
       expect(typeof actual).to.be.equal('string');
     });
   });
+  describe('singley linked list', function() {
+    describe('linked list method will go here', function() {
+
+    });
+  });
 });
